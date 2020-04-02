@@ -9,6 +9,7 @@ export class ProductosService {
 
   productos: ProductoInterface[] = []
   cargando = true;
+  productosFiltrado: ProductoInterface[] = []
 
   constructor(private http: HttpClient) {
     this.cargarPorductos();
@@ -17,7 +18,7 @@ export class ProductosService {
   private cargarPorductos() {
     this.http.get('https://loginapp-1e722.firebaseio.com/productos_idx.json')
       .subscribe((resp: ProductoInterface[]) => {
-        console.log(resp);
+        // console.log(resp);
         this.productos = resp
 
         setTimeout(() => {
@@ -25,4 +26,17 @@ export class ProductosService {
         }, 2000);
       })
   }
+
+  public getProducto(id:string){
+    return this.http.get(`https://loginapp-1e722.firebaseio.com/productos/${id}.json`)
+  }
+
+  public buscarProducto(termimo: string){
+    this.productosFiltrado = this.productos.filter(producto =>{
+      return true;
+    })
+    console.log(this.productosFiltrado);
+    
+  }
+
 }

@@ -8,7 +8,7 @@
                 </li>
             </ul>
             <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}}
-                    Angel Joel Plaza Bustamante </span>All Right Reserved.</p>
+                   {{infoSvr.info.autor}} </span>All Right Reserved.</p>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a href="#0" class="rk-social-btn ">
                 <svg>
@@ -24,9 +24,11 @@
                     <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
                 </svg></a></div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span
-                    class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">angelplazab@gmail.com </a></span></p>
-            <p class="rk-footer__text rk-footer__by">951412302</p>
+            <p class="rk-footer__text rk-footer__contact "> 
+                <span class="ae-u-bold">Email: </span>
+                <span class="ae-u-bolder"> <a href="mailTo:{{infoSvr.info.email}}" class="rk-dark-color ">{{infoSvr.info.email}} </a></span>
+            </p>
+            <p class="rk-footer__text rk-footer__by">{{infoSvr.info.telf}} </p>
         </div>
     </div>
 </footer>

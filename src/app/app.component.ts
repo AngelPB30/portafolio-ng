@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { InfoPaginaService } from './services/info-pagina.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,8 +9,9 @@ import { InfoPaginaService } from './services/info-pagina.service';
 })
 export class AppComponent {
 
-  constructor(private dataService: InfoPaginaService){
-
-  }
+  constructor(public infoservice: InfoPaginaService){
+   
+    
+  } 
 
 }

@@ -1,5 +1,4 @@
 <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-    ww
     <a *ngFor="let product of productoService.productosFiltrado" [routerLink]="['/item',product.cod]"
         class="rk-item ae-masonry__item  animated fadeIn">
         <img src="assets/productos/{{product.url}}.jpg" alt="">
